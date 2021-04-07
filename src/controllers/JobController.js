@@ -24,11 +24,11 @@ module.exports = {
     res.render("job")
   },
 
-  show(req, res) {
+  async show(req, res) {
     // id que vem como parametro da requisição
     const jobId = req.params.id
     const jobs = Job.get()
-    const profile = Profile.get()
+    const profile = await Profile.get()
     // busca dentro de data( dados ) um id = jobId recebido no params da url
     const job = jobs.find(job => Number(job.id) === Number(jobId))
 
