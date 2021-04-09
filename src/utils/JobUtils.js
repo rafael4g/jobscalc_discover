@@ -14,8 +14,11 @@ module.exports = {
     const timeDiffInMs = dueDateInMs - Date.now()
     // transformar um dia em milissegundos
     const dayInMs = 1000 * 60 * 60 * 24
-    // diferença em milissegundos arredondando pra baixo
-    const dayDiff = Math.floor(timeDiffInMs / dayInMs)
+    // diferença em milissegundos arredondando o numero inteiro - INCORRETO
+    // const dayDiff = Math.floor(timeDiffInMs / dayInMs)
+
+    // diferença em milissegundos arredondando pra baixo - CORRETO
+    const dayDiff = Math.ceil(timeDiffInMs / dayInMs)
 
     // restam x dias
     return dayDiff
