@@ -1,0 +1,37 @@
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#41414C" />
+<link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+<title><%= pageName  %> </title>
+
+<link rel="stylesheet" href="/styles/main.css" />
+<link rel="stylesheet" href="/styles/partials/page-header.css" />
+<link rel="stylesheet" href="/styles/partials/cards.css" />
+<link rel="stylesheet" href="/styles/partials/buttons.css" />
+<link rel="stylesheet" href="/styles/partials/modal.css" />
+<link rel="stylesheet" href="/styles/partials/animations.css" />
+
+
+<% if (pageName == "Home") { %>
+  <link rel="stylesheet" href="/styles/pages/index.css" />
+
+<% } else if (pageName == "Profile"){ %>
+    <link rel="stylesheet" href="/styles/partials/forms.css" />
+    <link rel="stylesheet" href="/styles/pages/profile.css" />
+
+<% } else if(pageName.indexOf(['Job','Job-Edit'])) { %>
+  <link rel="stylesheet" href="/styles/partials/forms.css" />
+  <link rel="stylesheet" href="/styles/pages/job.css" />  
+  
+<% } %>
+<!-- 
+é uma boa ideia você utilizar o preconnect com o servidor, assim todos 
+os recursos que serão requisitados do cachê no servidor serão obtidos 
+mais rapidamente, o que diminui o tempo de carregamento da página.
+-->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+  rel="stylesheet" />
